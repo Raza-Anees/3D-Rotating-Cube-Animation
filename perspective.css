@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+body {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.base {
+  height: 500px;
+  width: 500px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.outerbox {
+  height: 400px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  /* transform: rotateX(40deg); */
+  transition: transform 0.5s;
+  animation: rotation 10s infinite;
+}
+@keyframes rotation {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+.box1 {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  transform: rotateY(0deg) translateZ(100px);
+}
+
+.box2 {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.box3 {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background-color: pink;
+  transform: rotateY(90deg) translateZ(100px);
+}
+.box4 {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background-color: black;
+  transform: rotateY(180deg) translateZ(100px);
+}
+.box5 {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background-color: green;
+  transform: rotateX(90deg) translateZ(100px);
+}
+.box6 {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background-color: orange;
+  transform: rotateX(-90deg) translateZ(100px);
+}
